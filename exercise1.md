@@ -1,0 +1,6 @@
+The basic Continuous Interation (CI) setup includes linting, testing, and building. One of the most common tools for making sure your react code is neat and tidy, is ESLint. ESLint, created in 2013 by Nicholas C. Zakas, fixes code style and quality issues. According to wikipedia it "is a static code analysis tool for identifying problematic pattenrs in JavaScript code" It's very easy to use, create a .eslintrc file in the root of your repository and configure the rules to your liking.
+
+Testing your application is also very important. One of the more popular options for testing web applications is the Javascript testing framework Jest, designed and created by Christoph Nakazawa at Facebook. It's also qutie straight forward to use there's little to no hassle involved. Install the package, create tests, and run them through the console.
+
+Finally, building your react application with the webpack compiler makes it ready to be shipped into production. Webpack is probably the most popular of reactjs builders. Webpack takes your react code and turns it into a single file of vanilla javascript so it's able to run on all browsers that support standard javascript, since older browsers don't know how to .  If you don't know what you're doing or havent had previous experience with compilers before it can be quite difficult to get the jist of webpack. 
+
