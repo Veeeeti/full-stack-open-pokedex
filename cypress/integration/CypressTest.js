@@ -7,7 +7,6 @@ describe('Pokedex', function() {
   })
   it('pokemon page can be navigated to', function() {
     cy.contains('charmeleon').click()
-    cy.contains('Next').click()
-    cy.contains('charmander')
+    cy.contains('solar power')
   })
 })
