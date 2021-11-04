@@ -54,7 +54,7 @@ jobs:
             {
               attachments: [{
                 color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
-                text: `(${process.env.AS_COMMIT}) of ${process.env.AS_REPO} by ${process.env.AS_AUTHOR} ${{ job.status }} in ${process.env.AS_TOOK}`,
+                text: `commit: (${process.env.AS_COMMIT}) of ${process.env.AS_REPO} by ${process.env.AS_AUTHOR} Status: ${{ job.status }} was completed in in: ${process.env.AS_TOOK}`,
               }]
             }
         env:
