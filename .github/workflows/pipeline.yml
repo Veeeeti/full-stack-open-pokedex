@@ -51,11 +51,13 @@ jobs:
         with:
           status: custom
           fields: repo,message,commit,author,took # selectable (default: repo,message)
-          custom_payload: |{
-            attachments: [{
-              color: 'good',
-              text: `A new version deployed to heroku ${process.env.AS_COMMIT} by author ${process.env.AS_AUTHOR}. The build took ${process.env.AS_TOOK}.`,
-            }]}
+          custom_payload: |
+            {
+              attachments: [{
+                color: 'good'
+                text: `A new version deployed to heroku ${process.env.AS_COMMIT} by author ${process.env.AS_AUTHOR}. The build took ${process.env.AS_TOOK}.`,
+              }]
+            }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
         if: always() # Pick up events even if the job fails or is canceled.
