@@ -50,7 +50,7 @@ jobs:
         with:
           status: custom
           fields: repo,message,commit,author,action,took # selectable (default: repo,message)
-           custom_payload: |
+          custom_payload: |
             {
               attachments: [{
                 color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
